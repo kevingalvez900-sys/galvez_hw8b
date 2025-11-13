@@ -1,0 +1,1 @@
+document.getElementById("send").addEventListener("click",async()=>{const t={name:"Alex",countries:["USA","France","Japan","Mexico"]},r=await fetch("/api/countries",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(t)}),n=await r.text();document.getElementById("result").textContent=n});

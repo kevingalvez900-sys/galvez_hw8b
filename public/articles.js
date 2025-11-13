@@ -1,0 +1,1 @@
+document.getElementById("articleForm").addEventListener("submit",async e=>{e.preventDefault();const t=new FormData(e.target),r=new URLSearchParams(t),n=await fetch("/articles",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:r}),a=await n.text();document.getElementById("result").textContent=a});
